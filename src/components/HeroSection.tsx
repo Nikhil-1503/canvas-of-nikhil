@@ -54,21 +54,26 @@ const HeroSection = () => {
               Color
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:mx-0 lg:text-lg">
+          {/* <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:mx-0 lg:text-lg">
             Self-taught artist exploring charcoal, graphite, and colored pencil artworks with a focus on realism, texture, and expression.
+          </p> */}
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:mx-0 lg:text-lg">
+            A self-taught traditional artist passionate about realism, texture, and emotional storytelling. 
+            I explore charcoal, graphite, and colored pencils to capture expressions, depth, and moments that feel alive on paper.
           </p>
+
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:justify-start">
             <button
               onClick={() => scrollTo("#portfolio")}
               className="rounded-sm bg-primary px-8 py-3 font-body text-sm font-medium tracking-[0.1em] text-primary-foreground transition-all hover:shadow-[0_0_25px_hsl(340_82%_58%_/_0.4)]"
             >
-              VIEW PORTFOLIO
+              VIEW GALLERY
             </button>
             <button
               onClick={() => scrollTo("#contact")}
               className="rounded-sm border border-primary/30 px-8 py-3 font-body text-sm font-medium tracking-[0.1em] text-primary transition-all hover:border-primary hover:bg-primary/5"
             >
-              COMMISSION ARTWORK
+              REQUEST A COMMISSION
             </button>
           </div>
         </motion.div>

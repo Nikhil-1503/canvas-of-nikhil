@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
+# 🎨 Nikhil Shanbhag – Art Portfolio Website
 
-## Project info
+A modern, vibrant, and interactive art portfolio website showcasing realistic portraits, traditional artworks, and religious art created using charcoal, graphite, colored pencils, and markers.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This portfolio is designed to highlight artworks in a gallery-style layout with filters, an immersive carousel viewer, and artistic UI elements inspired by paint, brushes, and canvas aesthetics.
 
-## How can I edit this code?
+---
+## ✨ Features
 
-There are several ways of editing your application.
+🖌️ Art-Themed Design
 
-**Use Lovable**
+- Dark canvas-style background with vibrant paint strokes and splashes
+- Artistic icons (paintbrush, palette, pencil, canvas)
+- Minimal yet expressive UI to keep focus on artworks
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+🖼️ Portfolio Gallery
 
-Changes made via Lovable will be committed automatically to this repo.
+- Responsive image gallery grid
 
-**Use your preferred IDE**
+Filters by:
+- Medium (Charcoal, Graphite, Colored Pencil, Marker)
+- Category (Portraits, Religious, Traditional)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Click any artwork to open a full-screen carousel slider
+- Auto-slide with manual navigation and artwork details
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🎞️ Artistic Loading Animation
 
-Follow these steps:
+- Custom art-themed preloader
+- Paintbrush strokes and colorful paint splashes animation
+- Smooth transition revealing the homepage like a painted canvas
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/Nikhil-1503/canvas-of-nikhil.git
+cd canvas-of-nikhil
 
-# Step 3: Install the necessary dependencies.
-npm i
+2️⃣ Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3️⃣ Run the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Open http://localhost:3000 to view the website.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📸 Screenshots
+<!-- 
+![Homepage](./screenshots/home.png)
+![Gallery](./screenshots/gallery.png)
+![Carousel](./screenshots/carousel.png) -->
 
-**Use GitHub Codespaces**
+🌍 Live Demo
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🔗 Live Website: https://canvasofnikhil.netlify.app/
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+📷 Instagram: https://instagram.com/nikhil.1503
