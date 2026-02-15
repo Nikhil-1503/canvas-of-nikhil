@@ -2,24 +2,22 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Palette, PenTool, Eye } from "lucide-react";
+import { SectionTitle, PaintSplatter, PaintDot } from "./PaintDecorations";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="relative py-24 px-6">
-      <div className="mx-auto max-w-6xl" ref={ref}>
-        <motion.div
-          className="mb-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="mb-2 font-body text-sm tracking-[0.25em] text-primary">ABOUT THE ARTIST</p>
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">The Journey</h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-primary/40" />
-        </motion.div>
+    <section id="about" className="relative py-24 px-6 overflow-hidden">
+      {/* Paint decorations */}
+      <PaintSplatter color="hsl(210 90% 56%)" className="-right-16 top-12" delay={0.2} size={200} />
+      <PaintSplatter color="hsl(45 95% 58%)" className="-left-12 bottom-20" delay={0.4} size={150} />
+      <PaintDot color="hsl(0 85% 60%)" className="top-20 left-[15%]" delay={0.6} size={5} />
+      <PaintDot color="hsl(270 70% 60%)" className="bottom-32 right-[20%]" delay={0.8} size={6} />
+
+      <div className="mx-auto max-w-6xl relative z-10" ref={ref}>
+        <SectionTitle label="ABOUT THE ARTIST" title="The Journey" inView={inView} />
 
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <motion.div
@@ -45,15 +43,15 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             {[
-              { icon: PenTool, title: "Charcoal & Graphite", desc: "Deep contrasts and photorealistic detail" },
-              { icon: Palette, title: "Colored Pencil", desc: "Vibrant, layered color artworks" },
-              { icon: Eye, title: "Realism", desc: "Emotion captured in every stroke" },
+              { icon: PenTool, title: "Charcoal & Graphite", desc: "Deep contrasts and photorealistic detail", color: "paint-red" },
+              { icon: Palette, title: "Colored Pencil", desc: "Vibrant, layered color artworks", color: "paint-blue" },
+              { icon: Eye, title: "Realism", desc: "Emotion captured in every stroke", color: "paint-purple" },
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-lg border border-border bg-card p-6 text-center transition-all hover:border-primary/30 hover:glow-border"
+                className="rounded-lg border border-border bg-card p-6 text-center transition-all hover:border-primary/30 hover:paint-glow"
               >
-                <item.icon className="mx-auto mb-3 h-8 w-8 text-primary" />
+                <item.icon className={`mx-auto mb-3 h-8 w-8 text-${item.color}`} />
                 <h3 className="font-display text-base font-semibold text-foreground">{item.title}</h3>
                 <p className="mt-1 font-body text-sm text-muted-foreground">{item.desc}</p>
               </div>
