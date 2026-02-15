@@ -6,49 +6,56 @@
 
 @layer base {
   :root {
-    --background: 20 14% 8%;
-    --foreground: 40 20% 90%;
+    --background: 220 20% 7%;
+    --foreground: 0 0% 93%;
 
-    --card: 20 12% 12%;
-    --card-foreground: 40 20% 90%;
+    --card: 220 18% 11%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 20 12% 12%;
-    --popover-foreground: 40 20% 90%;
+    --popover: 220 18% 11%;
+    --popover-foreground: 0 0% 93%;
 
-    --primary: 40 60% 55%;
-    --primary-foreground: 20 14% 8%;
+    --primary: 340 82% 58%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 10% 16%;
-    --secondary-foreground: 40 20% 85%;
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 20 8% 18%;
-    --muted-foreground: 30 10% 55%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 40 60% 55%;
-    --accent-foreground: 20 14% 8%;
+    --accent: 45 95% 58%;
+    --accent-foreground: 220 20% 7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 10% 20%;
-    --input: 20 10% 20%;
-    --ring: 40 60% 55%;
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 340 82% 58%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 20 14% 8%;
-    --sidebar-foreground: 40 20% 90%;
-    --sidebar-primary: 40 60% 55%;
-    --sidebar-primary-foreground: 20 14% 8%;
-    --sidebar-accent: 20 10% 16%;
-    --sidebar-accent-foreground: 40 20% 90%;
-    --sidebar-border: 20 10% 20%;
-    --sidebar-ring: 40 60% 55%;
+    /* Vibrant paint colors */
+    --paint-red: 0 85% 60%;
+    --paint-blue: 210 90% 56%;
+    --paint-cyan: 185 85% 50%;
+    --paint-yellow: 45 95% 58%;
+    --paint-purple: 270 70% 60%;
+    --paint-green: 145 65% 45%;
+    --paint-orange: 25 95% 58%;
+
+    --sidebar-background: 220 20% 7%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 340 82% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 340 82% 58%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
-
-    --gold-glow: 0 0 30px hsl(40 60% 55% / 0.3);
   }
 }
 
@@ -74,11 +81,8 @@
   .font-body {
     font-family: var(--font-body);
   }
-  .text-gold-glow {
-    text-shadow: var(--gold-glow);
-  }
-  .glow-border {
-    box-shadow: 0 0 15px hsl(40 60% 55% / 0.15);
+  .paint-glow {
+    box-shadow: 0 0 20px hsl(340 82% 58% / 0.2), 0 0 40px hsl(270 70% 60% / 0.1);
   }
 }
 
@@ -87,14 +91,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(20 14% 8%);
+  background: hsl(220 20% 7%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(20 10% 25%);
+  background: hsl(220 12% 25%);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(40 60% 55% / 0.5);
+  background: hsl(340 82% 58% / 0.5);
 }
 
 /* Smooth scrolling */

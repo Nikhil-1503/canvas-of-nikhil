@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { SectionTitle, PaintSplatter } from "./PaintDecorations";
 
 import charcoal1 from "@/assets/artwork-charcoal-1.jpg";
 import charcoal2 from "@/assets/artwork-charcoal-2.jpg";
@@ -29,6 +30,13 @@ const artworks: Artwork[] = [
   { src: colored2, title: "Grace & Heritage", year: "2025", medium: "Colored Pencil", category: "Portraits", description: "A portrait celebrating traditional beauty and cultural elegance." },
 ];
 
+const mediumColors: Record<string, string> = {
+  Charcoal: "border-paint-red/40",
+  Graphite: "border-paint-blue/40",
+  "Colored Pencil": "border-paint-yellow/40",
+  Marker: "border-paint-purple/40",
+};
+
 const filters = {
   medium: ["All", "Charcoal", "Graphite", "Colored Pencil", "Marker"],
   category: ["All", "Portraits", "Religious Artworks", "Traditional Art"],
@@ -53,18 +61,12 @@ const PortfolioSection = () => {
   const nextImage = () => setLightboxIndex((i) => (i !== null ? (i + 1) % filtered.length : null));
 
   return (
-    <section id="portfolio" className="relative py-24 px-6">
-      <div className="mx-auto max-w-7xl" ref={ref}>
-        <motion.div
-          className="mb-12 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="mb-2 font-body text-sm tracking-[0.25em] text-primary">PORTFOLIO</p>
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Selected Works</h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-primary/40" />
-        </motion.div>
+    <section id="portfolio" className="relative py-24 px-6 overflow-hidden">
+      <PaintSplatter color="hsl(340 82% 58%)" className="-left-16 top-20" delay={0.2} size={180} />
+      <PaintSplatter color="hsl(210 90% 56%)" className="-right-12 bottom-32" delay={0.4} size={160} />
+
+      <div className="mx-auto max-w-7xl relative z-10" ref={ref}>
+        <SectionTitle label="PORTFOLIO" title="Selected Works" inView={inView} />
 
         {/* Filters */}
         <motion.div
@@ -116,7 +118,7 @@ const PortfolioSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group cursor-pointer overflow-hidden rounded-lg border border-border bg-card"
+                className={`group cursor-pointer overflow-hidden rounded-lg border-2 ${mediumColors[art.medium] || "border-border"} bg-card transition-all hover:paint-glow`}
                 onClick={() => openLightbox(i)}
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
