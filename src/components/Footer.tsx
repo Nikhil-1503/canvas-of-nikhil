@@ -30,7 +30,7 @@ const Footer = () => {
 
         <div className="flex gap-4">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/nikhil.1503"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-primary/40 hover:text-primary hover:paint-glow"
@@ -39,7 +39,7 @@ const Footer = () => {
             <Instagram size={18} />
           </a>
           <a
-            href="mailto:nikhilshanbhag.art@gmail.com"
+            href="mailto:nikhilshanbhag1503@gmail.com"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-primary/40 hover:text-primary hover:paint-glow"
             aria-label="Email"
           >

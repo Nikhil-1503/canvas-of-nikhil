@@ -3,13 +3,20 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTitle, PaintSplatter } from "./PaintDecorations";
 
-import charcoal1 from "@/assets/artwork-charcoal-1.jpg";
-import charcoal2 from "@/assets/artwork-charcoal-2.jpg";
-import graphite1 from "@/assets/artwork-graphite-1.jpg";
-import graphite2 from "@/assets/artwork-graphite-2.jpg";
-import colored1 from "@/assets/artwork-colored-1.jpg";
-import colored2 from "@/assets/artwork-colored-2.jpg";
-import marker1 from "@/assets/artwork-marker-1.jpg";
+import graphite1 from "@/assets/artwork-shivaji_maharaj.jpg";
+import graphite2 from "@/assets/artwork-ms_dhoni.jpg";
+
+import charcoal1 from "@/assets/artwork-batman.jpg";
+import charcoal2 from "@/assets/artwork-dr_rajkumar.jpg";
+import charcoal3 from "@/assets/artwork-shrimad_samyamindra_swamiji.jpg";
+import charcoal4 from "@/assets/artwork-shrimad_vidyadheesh_swamiji.jpg";
+import charcoal5 from "@/assets/artwork-harry_potter.jpg";
+import charcoal6 from "@/assets/artwork-krishna_and_calf.jpg";
+
+import colored1 from "@/assets/artwork-abtract_lion.jpg";
+import colored2 from "@/assets/artwork-roronoa_zoro.jpg";
+
+import marker1 from "@/assets/artwork-lord_venkateshwara.jpg";
 
 interface Artwork {
   src: string;
@@ -21,13 +28,17 @@ interface Artwork {
 }
 
 const artworks: Artwork[] = [
-  { src: charcoal1, title: "Wisdom in Lines", year: "2025", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: graphite1, title: "Silent Gaze", year: "2025", medium: "Graphite", category: "Portraits", description: "Graphite portrait capturing quiet strength and contemplation." },
-  { src: colored1, title: "Divine Melody", year: "2024", medium: "Colored Pencil", category: "Religious Artworks", description: "Lord Krishna rendered in vibrant colored pencils, celebrating devotion." },
-  { src: charcoal2, title: "Innocence", year: "2024", medium: "Charcoal", category: "Portraits", description: "The joy and purity of childhood captured in charcoal." },
-  { src: marker1, title: "Wild Spirit", year: "2025", medium: "Marker", category: "Traditional Art", description: "Bold marker artwork bringing a tiger's fierce beauty to life." },
-  { src: graphite2, title: "Teardrops", year: "2024", medium: "Graphite", category: "Portraits", description: "An emotive graphite study of eyes filled with vulnerability." },
-  { src: colored2, title: "Grace & Heritage", year: "2025", medium: "Colored Pencil", category: "Portraits", description: "A portrait celebrating traditional beauty and cultural elegance." },
+  { src: charcoal2, title: "Dr. Rajkumar", year: "2025", medium: "Charcoal", category: "Portraits", description: "The joy and purity of childhood captured in charcoal." },
+  { src: charcoal1, title: "Batman", year: "2024", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
+  { src: charcoal3, title: "Shrimad Samyamindra Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
+  { src: charcoal4, title: "Shrimad Vidyadheesh Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
+  { src: charcoal5, title: "Harry Potter", year: "2023", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
+  { src: charcoal6, title: "Krishna and calf", year: "2024", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
+  { src: marker1, title: "Lord Venkateswara", year: "2024", medium: "Marker", category: "Traditional Art", description: "Bold marker artwork bringing a tiger's fierce beauty to life." },
+  { src: graphite1, title: "Chattrapathi Shivaji Maharaj", year: "2022", medium: "Graphite", category: "Portraits", description: "Graphite portrait capturing quiet strength and contemplation." },
+  { src: colored1, title: "Abstract Lion", year: "2024", medium: "Colored Pencil", category: "Religious Artworks", description: "Lord Krishna rendered in vibrant colored pencils, celebrating devotion." },
+  { src: graphite2, title: "MS Dhoni", year: "2021", medium: "Graphite", category: "Portraits", description: "An emotive graphite study of eyes filled with vulnerability." },
+  { src: colored2, title: "Roronoa Zoro", year: "2024", medium: "Colored Pencil", category: "Portraits", description: "A portrait celebrating traditional beauty and cultural elegance." },
 ];
 
 const mediumColors: Record<string, string> = {

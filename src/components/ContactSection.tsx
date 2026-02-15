@@ -89,12 +89,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-body text-xs tracking-wider text-muted-foreground">EMAIL</p>
-                <p className="font-body text-sm text-foreground">nikhilshanbhag.art@gmail.com</p>
+                <p className="font-body text-sm text-foreground">nikhil.shanbhag1503@gmail.com</p>
               </div>
             </div>
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/nikhil.1503"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 group"
@@ -104,7 +104,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-body text-xs tracking-wider text-muted-foreground">INSTAGRAM</p>
-                <p className="font-body text-sm text-foreground group-hover:text-primary transition-colors">@nikhilshanbhag.art</p>
+                <p className="font-body text-sm text-foreground group-hover:text-primary transition-colors">@nikhil.1503</p>
               </div>
             </a>
           </motion.div>
