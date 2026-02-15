@@ -4,7 +4,20 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTitle, PaintSplatter } from "./PaintDecorations";
 
 import graphite1 from "@/assets/artwork-shivaji_maharaj.jpg";
+import graphite12 from "@/assets/artwork-joker.jpg";
 import graphite2 from "@/assets/artwork-ms_dhoni.jpg";
+import graphite3 from "@/assets/artwork-baby_krishna.jpg";
+import graphite4 from "@/assets/artwork-lord_ganesh.jpg";
+import graphite5 from "@/assets/artwork-bahubali.jpg";
+import graphite6 from "@/assets/artwork-arijit_singh.jpg";
+import graphite7 from "@/assets/artwork-iron_man.jpg";
+import graphite8 from "@/assets/artwork-narendra_modi.jpg";
+import graphite9 from "@/assets/artwork-vicky_kaushal.jpg";
+import graphite10 from "@/assets/artwork-stan_lee.jpg";
+import graphite11 from "@/assets/artwork-lynn_mathew.jpg";
+import graphite13 from "@/assets/artwork-abdul_kalam.jpg";
+import graphite14 from "@/assets/artwork-radhakrishnan.jpg";
+import graphite15 from "@/assets/artwork-subhash_chandra_bose.jpg";
 
 import charcoal1 from "@/assets/artwork-batman.jpg";
 import charcoal2 from "@/assets/artwork-dr_rajkumar.jpg";
@@ -12,11 +25,23 @@ import charcoal3 from "@/assets/artwork-shrimad_samyamindra_swamiji.jpg";
 import charcoal4 from "@/assets/artwork-shrimad_vidyadheesh_swamiji.jpg";
 import charcoal5 from "@/assets/artwork-harry_potter.jpg";
 import charcoal6 from "@/assets/artwork-krishna_and_calf.jpg";
+import charcoal7 from "@/assets/artwork-lord-rama.jpg";
+import charcoal8 from "@/assets/artwork-lord_hanuman.jpg";
+import charcoal9 from "@/assets/artwork-little_krishna.jpg";
+import charcoal10 from "@/assets/artwork-tmkoc.jpg";
+import charcoal11 from "@/assets/artwork-virat_kohli.jpg";
 
 import colored1 from "@/assets/artwork-abtract_lion.jpg";
 import colored2 from "@/assets/artwork-roronoa_zoro.jpg";
+import colored3 from "@/assets/artwork-3D_butterfly.jpg";
+
 
 import marker1 from "@/assets/artwork-lord_venkateshwara.jpg";
+import marker2 from "@/assets/artwork-shree_krishna.jpg";
+import marker3 from "@/assets/artwork-sharada_devi.jpg";
+import marker4 from "@/assets/artwork-lord_ganesha.jpg";
+import marker5 from "@/assets/artwork-onepiece.jpg";
+import marker6 from "@/assets/artwork-minions.jpg";
 
 interface Artwork {
   src: string;
@@ -28,17 +53,42 @@ interface Artwork {
 }
 
 const artworks: Artwork[] = [
-  { src: charcoal2, title: "Dr. Rajkumar", year: "2025", medium: "Charcoal", category: "Portraits", description: "The joy and purity of childhood captured in charcoal." },
-  { src: charcoal1, title: "Batman", year: "2024", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: charcoal3, title: "Shrimad Samyamindra Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: charcoal4, title: "Shrimad Vidyadheesh Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: charcoal5, title: "Harry Potter", year: "2023", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: charcoal6, title: "Krishna and calf", year: "2024", medium: "Charcoal", category: "Portraits", description: "A study of age, experience, and character rendered in deep charcoal strokes." },
-  { src: marker1, title: "Lord Venkateswara", year: "2024", medium: "Marker", category: "Traditional Art", description: "Bold marker artwork bringing a tiger's fierce beauty to life." },
-  { src: graphite1, title: "Chattrapathi Shivaji Maharaj", year: "2022", medium: "Graphite", category: "Portraits", description: "Graphite portrait capturing quiet strength and contemplation." },
-  { src: colored1, title: "Abstract Lion", year: "2024", medium: "Colored Pencil", category: "Religious Artworks", description: "Lord Krishna rendered in vibrant colored pencils, celebrating devotion." },
-  { src: graphite2, title: "MS Dhoni", year: "2021", medium: "Graphite", category: "Portraits", description: "An emotive graphite study of eyes filled with vulnerability." },
-  { src: colored2, title: "Roronoa Zoro", year: "2024", medium: "Colored Pencil", category: "Portraits", description: "A portrait celebrating traditional beauty and cultural elegance." },
+  { src: charcoal2, title: "Hiranyakashipu: The Dr. Rajkumar Legacy", year: "2025", medium: "Charcoal", category: "Portraits", description: "Capturing the raw intensity and dramatic shadows of the Nata Sarvabhouma's portrayal of the mighty Rakshasa King." },
+  { src: charcoal1, title: "The Dark Knight", year: "2024", medium: "Charcoal", category: "Portraits", description: "Capturing the heavy silence and brooding intensity of Batman through the depth of Charcoal." },
+  { src: charcoal3, title: "Srimad Samyamindra Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "Artwork of Kashipathadhipati Srimad Samyamindra Thirtha Swamiji." },
+  { src: charcoal4, title: "Shrimad Vidyadheesh Swamiji", year: "2026", medium: "Charcoal", category: "Portraits", description: "Artwork of Parampoojya Shreemad Vidyadheesh Teertha Shreepad Vader Swamiji." },
+  { src: charcoal5, title: "Harry Potter: The Boy Who Lived", year: "2023", medium: "Charcoal", category: "Portraits", description: "A monochromatic study of magic, bravery, and the boy behind the lightning bolt." },
+  { src: charcoal6, title: "Gopala: The Divine Cowherd", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: charcoal7, title: "Rama", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: charcoal8, title: "Hanuman", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: charcoal9, title: "Little Krishna", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: charcoal10, title: "TMKOC", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: charcoal11, title: "Virat Kohli", year: "2025", medium: "Charcoal", category: "Religious Artworks", description: "A soulful charcoal study capturing the compassionate bond and divinity of Lord Krishna." },
+  { src: marker1, title: "Lord Venkateswara: The Golden Radiance", year: "2024", medium: "Marker", category: "Religious Artworks", description: "Capturing the majestic beauty and divinity of Lord Venkateswara Tirupati Balaji." },
+  { src: graphite1, title: "Legend of Chhatrapati Shivaji Maharaj", year: "2022", medium: "Graphite", category: "Portraits", description: "A detailed graphite tribute to the visionary founder of the Maratha Empire." },
+  { src: colored1, title: "The Prismatic Lion", year: "2024", medium: "Colored Pencil", category: "Abstract Art", description: "A vibrant explosion of color capturing the majestic gaze of the beast." },
+  { src: colored2, title: "Roronoa Zoro: Spirit of Three Swords", year: "2024", medium: "Colored Pencil", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: colored3, title: "3D Butterfly", year: "2024", medium: "Colored Pencil", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: marker5, title: "Onepiece", year: "2024", medium: "Marker", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: marker2, title: "Krishna", year: "2024", medium: "Marker", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: marker3, title: "Ganesha", year: "2024", medium: "Marker", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: marker4, title: "Sharada Devi", year: "2024", medium: "Marker", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: marker6, title: "Minions", year: "2024", medium: "Marker", category: "Portraits", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
+  { src: graphite2, title: "MS Dhoni: Captain Cool", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite3, title: "Krishna", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite4, title: "Ganesh", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite5, title: "Bahubali", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite6, title: "Arijit Singh", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite7, title: "Iron Man", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite8, title: "Modiji", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite9, title: "Vicky Kaushal", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite10, title: "Stan Lee", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite11, title: "Lynn Mathew", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite12, title: "Joker", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite13, title: "Abdul Kalam", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite14, title: "Radhakrishnan", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  { src: graphite15, title: "Subhash Chandra Bose", year: "2019", medium: "Graphite", category: "Portraits", description: "A monochromatic exploration of the grit and determination behind the No. 7" },
+  
 ];
 
 const mediumColors: Record<string, string> = {
@@ -49,8 +99,8 @@ const mediumColors: Record<string, string> = {
 };
 
 const filters = {
-  medium: ["All", "Charcoal", "Graphite", "Colored Pencil", "Marker"],
-  category: ["All", "Portraits", "Religious Artworks", "Traditional Art"],
+  medium: ["All", "Charcoal-Graphite Mix", "Graphite", "Color Pencil", "Marker-Color pencil Mix"],
+  category: ["All", "Portraits", "Religious Artworks", "Abstract Art"],
 };
 
 const PortfolioSection = () => {
