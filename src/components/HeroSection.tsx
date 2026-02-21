@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import collageImg from "@/assets/artwork-collage.png";
+import collageImg from "@/assets-webp/artwork-collage.webp";
 import { PaintSplatter, PaintDot, BrushStroke } from "./PaintDecorations";
 
 const HeroSection = () => {
@@ -90,7 +90,7 @@ const HeroSection = () => {
             <img
               src={collageImg}
               alt="Artwork collage by Nikhil Shanbhag"
-              className="relative w-72 rounded-2xl border-2 border-primary/30 object-cover shadow-2xl sm:w-96"
+              className="relative w-72 rounded-2xl border-2 border-primary/30 object-cover shadow-2xl sm:w-96 lazy"
             />
           </div>
         </motion.div>
