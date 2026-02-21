@@ -39,13 +39,13 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            className="flex flex-col items-center"
+            className="flex flex-row items-center gap-6"
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             {/* Profile image */}
-            <div className="relative mb-10">
+            <div className="relative shrink-0">
               <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-paint-red/20 via-paint-blue/15 to-paint-purple/20 blur-xl" />
               <img
                 src={profileImg}
@@ -54,7 +54,7 @@ const AboutSection = () => {
               />
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 w-full">
+            <div className="flex flex-col gap-3">
             {[
               { icon: PenTool, title: "Charcoal & Graphite", desc: "Deep contrasts and photorealistic detail", color: "paint-red" },
               { icon: Palette, title: "Colored Pencil", desc: "Vibrant, layered color artworks", color: "paint-blue" },
@@ -62,11 +62,11 @@ const AboutSection = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-lg border border-border bg-card p-6 text-center transition-all hover:border-primary/30 hover:paint-glow"
+                className="rounded-lg border border-border bg-card p-3 text-center transition-all hover:border-primary/30 hover:paint-glow"
               >
-                <item.icon className={`mx-auto mb-3 h-8 w-8 text-${item.color}`} />
-                <h3 className="font-display text-base font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-1 font-body text-sm text-muted-foreground">{item.desc}</p>
+                <item.icon className={`mx-auto mb-1 h-5 w-5 text-${item.color}`} />
+                <h3 className="font-display text-sm font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-0.5 font-body text-xs text-muted-foreground">{item.desc}</p>
               </div>
             ))}
             </div>
