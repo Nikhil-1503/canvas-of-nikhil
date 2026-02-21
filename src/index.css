@@ -105,3 +105,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Behind everything */
+  pointer-events: none; /* Clicks pass through */
+}

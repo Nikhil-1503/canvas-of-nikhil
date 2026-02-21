@@ -7,6 +7,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ParticleCursor from "@/components/ParticleCursor";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -16,6 +17,8 @@ const Index = () => {
       <Preloader onComplete={() => setLoaded(true)} />
       {loaded && (
         <>
+          <canvas id="particleCanvas"></canvas>
+          <ParticleCursor />
           <Navbar />
           <main>
             <HeroSection />
