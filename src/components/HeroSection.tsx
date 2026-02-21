@@ -46,7 +46,7 @@ const HeroSection = () => {
           <p className="mb-4 font-body text-sm tracking-[0.25em] text-primary">SELF-TAUGHT ARTIST</p>
           <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
             Bringing{" "}
-            <span className="bg-gradient-to-r from-paint-red via-primary to-paint-purple bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-paint-yellow via-primary to-paint-yellow bg-clip-text text-transparent">
               Realism
             </span>{" "}
             to Life Through Charcoal and{" "}
