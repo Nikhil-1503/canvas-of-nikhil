@@ -25,17 +25,8 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col items-center md:items-start"
+            className="flex flex-col md:items-start"
           >
-            {/* Profile image */}
-            <div className="relative mb-8">
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-paint-red/20 via-paint-blue/15 to-paint-purple/20 blur-xl" />
-              <img
-                src={profileImg}
-                alt="Nikhil Shanbhag"
-                className="relative h-48 w-48 rounded-full border-2 border-primary/30 object-cover shadow-2xl sm:h-56 sm:w-56"
-              />
-            </div>
             <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
               I'm <span className="text-foreground font-medium">Nikhil Shanbhag</span>, a self-taught traditional artist with a deep passion for realism. My artistic journey began with a simple pencil and paper, driven by curiosity and an unrelenting desire to capture the world as I see it.
             </p>
@@ -48,11 +39,22 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3"
+            className="flex flex-col items-center"
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
+            {/* Profile image */}
+            <div className="relative mb-10">
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-paint-red/20 via-paint-blue/15 to-paint-purple/20 blur-xl" />
+              <img
+                src={profileImg}
+                alt="Nikhil Shanbhag"
+                className="relative h-48 w-48 rounded-full border-2 border-primary/30 object-cover shadow-2xl sm:h-64 sm:w-64"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 w-full">
             {[
               { icon: PenTool, title: "Charcoal & Graphite", desc: "Deep contrasts and photorealistic detail", color: "paint-red" },
               { icon: Palette, title: "Colored Pencil", desc: "Vibrant, layered color artworks", color: "paint-blue" },
@@ -67,6 +69,7 @@ const AboutSection = () => {
                 <p className="mt-1 font-body text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
+            </div>
           </motion.div>
         </div>
       </div>
