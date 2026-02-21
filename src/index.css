@@ -119,3 +119,7 @@ html {
 .lightbox-swipe {
     touch-action: pan-y;
 }
+
+* {
+  cursor: url("/images/Paintcursor.png") 0 0, auto;
+}
