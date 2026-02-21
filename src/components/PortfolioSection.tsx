@@ -143,12 +143,12 @@ const PortfolioSection = () => {
   };
 
   const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
+    if (touchStartX.current === null || touchEndX.current === null) return;
 
     const diff = touchStartX.current - touchEndX.current;
 
-    if (diff > 50) nextImage();     // swipe left
-    if (diff < -50) prevImage();    // swipe right
+    if (diff > 60) nextImage();     // swipe left
+    if (diff < -60) prevImage();    // swipe right
 
     touchStartX.current = null;
     touchEndX.current = null;
@@ -168,9 +168,6 @@ const PortfolioSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2 }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
           <div className="flex flex-wrap justify-center gap-2">
             {filters.medium.map((m) => (
@@ -272,6 +269,9 @@ const PortfolioSection = () => {
             <motion.div
               className="flex max-h-[90vh] max-w-4xl flex-col items-center gap-4 px-4"
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
               key={lightboxIndex}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}

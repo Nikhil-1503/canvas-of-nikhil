@@ -54,7 +54,7 @@ const AboutSection = () => {
 
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 w-full">
+            {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 w-full">
             {[
               { icon: PenTool, title: "Charcoal & Graphite", desc: "Deep contrasts and photorealistic detail", color: "paint-red" },
               { icon: Palette, title: "Colored Pencil", desc: "Vibrant, layered color artworks", color: "paint-blue" },
@@ -69,7 +69,7 @@ const AboutSection = () => {
 
 
               )}
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

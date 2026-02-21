@@ -115,3 +115,7 @@ html {
   z-index: -1; /* Behind everything */
   pointer-events: none; /* Clicks pass through */
 }
+
+.lightbox-swipe {
+    touch-action: pan-y;
+}
