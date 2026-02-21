@@ -28,13 +28,13 @@ const AboutSection = () => {
             className="flex flex-col md:items-start">
 
             <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
-              I'm <span className="text-foreground font-medium">Nikhil Shanbhag</span>, a self-taught traditional artist with a deep passion for realism. My artistic journey began with a simple pencil and paper, driven by curiosity and an unrelenting desire to capture the world as I see it.
+              Hi, I'm <span className="text-foreground font-medium">Nikhil Shanbhag</span>, an artist specializing in charcoal, pencil, and color pencil artworks. My journey into art began with the classic childhood scenery drawing—mountains, a flowing river, a small house, and birds flying across the sky. That simple sketch sparked my curiosity and love for drawing, and I’ve been exploring different art styles ever since.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground lg:text-lg">
-              Working primarily in charcoal, graphite, and colored pencil, I focus on creating portraits and artworks that convey raw emotion and intricate detail. Every piece is a meditation on texture, light, and the stories written on human faces.
+              Today, I focus on creating detailed and realistic artworks, often inspired by mythology, history, and everyday emotions.  
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground lg:text-lg">
-              My work spans realistic portraits, religious artworks, and expressive traditional pieces — each crafted with patience, dedication, and a commitment to pushing creative boundaries.
+              I enjoy learning new techniques, experimenting with mediums, and bringing stories to life through art. My goal is to create artworks that not only look beautiful but also connect with people and bring them joy.
             </p>
           </motion.div>
 

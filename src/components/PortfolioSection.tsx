@@ -130,6 +130,29 @@ const PortfolioSection = () => {
   const closeLightbox = () => setLightboxIndex(null);
   const prevImage = () => setLightboxIndex((i) => (i !== null ? (i - 1 + filtered.length) % filtered.length : null));
   const nextImage = () => setLightboxIndex((i) => (i !== null ? (i + 1) % filtered.length : null));
+  
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (diff > 50) nextImage();     // swipe left
+    if (diff < -50) prevImage();    // swipe right
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   return (
     <section id="portfolio" className="relative py-24 px-6 overflow-hidden">
@@ -145,6 +168,9 @@ const PortfolioSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2 }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="flex flex-wrap justify-center gap-2">
             {filters.medium.map((m) => (

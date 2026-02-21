@@ -58,8 +58,8 @@ const HeroSection = () => {
             Self-taught artist exploring charcoal, graphite, and colored pencil artworks with a focus on realism, texture, and expression.
           </p> */}
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:mx-0 lg:text-lg">
-            A self-taught traditional artist passionate about realism, texture, and emotional storytelling. 
-            I explore charcoal, graphite, and colored pencils to capture expressions, depth, and moments that feel alive on paper.
+            This portfolio showcases traditional artworks focused on realism, texture, and emotional storytelling. 
+            The collection explores different mediums to capture expressions, depth, and moments that feel alive on paper.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:justify-start">
