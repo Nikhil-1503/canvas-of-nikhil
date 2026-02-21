@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profileImg from "@/assets/profile.jpg";
+import collageImg from "@/assets/artwork-collage.png";
 import { PaintSplatter, PaintDot, BrushStroke } from "./PaintDecorations";
 
 const HeroSection = () => {
@@ -78,7 +78,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Profile image */}
+        {/* Artwork collage */}
         <motion.div
           className="flex-shrink-0"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -86,12 +86,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 3.2 }}
         >
           <div className="relative">
-            <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-paint-red/20 via-paint-blue/15 to-paint-purple/20 blur-xl" />
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary/30 via-transparent to-paint-cyan/20 blur-md" />
+            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-paint-red/20 via-paint-blue/15 to-paint-purple/20 blur-xl" />
             <img
-              src={profileImg}
-              alt="Nikhil Shanbhag - Traditional Artist"
-              className="relative h-64 w-64 rounded-full border-2 border-primary/30 object-cover shadow-2xl sm:h-80 sm:w-80"
+              src={collageImg}
+              alt="Artwork collage by Nikhil Shanbhag"
+              className="relative w-72 rounded-2xl border-2 border-primary/30 object-cover shadow-2xl sm:w-96"
             />
           </div>
         </motion.div>
