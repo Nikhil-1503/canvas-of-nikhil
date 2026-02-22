@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import collageImg from "@/assets-webp/artwork-collage.webp";
 import { PaintSplatter, PaintDot, BrushStroke } from "./PaintDecorations";
+// import BrushUnderline from "./Brushunderline";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -52,6 +53,7 @@ const HeroSection = () => {
             to Life Through Charcoal and{" "}
             <span className="bg-gradient-to-r from-paint-blue via-paint-cyan to-paint-green bg-clip-text text-transparent">
               Color
+              {/* <BrushUnderline /> */}
             </span>
           </h1>
           {/* <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:mx-0 lg:text-lg">

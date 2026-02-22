@@ -45,10 +45,8 @@ npm run dev
 Open http://localhost:3000 to view the website.
 
 📸 Screenshots
-<!-- 
-![Homepage](./screenshots/home.png)
-![Gallery](./screenshots/gallery.png)
-![Carousel](./screenshots/carousel.png) -->
+
+![Portfolio Preview](./public/images/canvasofnikhil.png)
 
 🌍 Live Demo
 
