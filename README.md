@@ -1,8 +1,8 @@
-# 🎨 Nikhil Shanbhag – Art Portfolio Website
+# 🎨 Canvas Of Nikhil – Art Portfolio Website
 
 A modern, vibrant, and interactive art portfolio website showcasing realistic portraits, traditional artworks, and religious art created using charcoal, graphite, colored pencils, and markers.
 
-This portfolio is designed to highlight artworks in a gallery-style layout with filters, an immersive carousel viewer, and artistic UI elements inspired by paint, brushes, and canvas aesthetics.
+This portfolio is designed to highlight my artworks in a gallery-style layout with filters, an immersive carousel viewer, and artistic UI elements inspired by paint, brushes, and canvas aesthetics.
 
 ---
 ## ✨ Features
@@ -33,7 +33,9 @@ Filters by:
 
 🚀 Getting Started
 1️⃣ Clone the repository
+
 git clone https://github.com/Nikhil-1503/canvas-of-nikhil.git
+
 cd canvas-of-nikhil
 
 2️⃣ Install dependencies

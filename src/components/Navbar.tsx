@@ -67,18 +67,25 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
-            className="absolute inset-x-0 top-full border-b border-border bg-background/95 backdrop-blur-md md:hidden"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            className="origin-top fixed inset-x-0 top-[72px] border-b border-border bg-background/95 backdrop-blur-md md:hidden"
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            exit={{ opacity: 0, scaleY: 0 }}
+            transition={{ duration: 0.25 }}
           >
             <div className="flex flex-col items-center gap-6 py-8">
               {navLinks.map((link) => (
+                // <button
+                //   key={link.href}
+                //   onClick={() => handleClick(link.href)}
+                //   className="font-body text-lg tracking-[0.1em] text-muted-foreground transition-colors hover:text-primary"
+                // >
+                //   {link.label}
+                // </button>
                 <button
                   key={link.href}
                   onClick={() => handleClick(link.href)}
-                  className="font-body text-lg tracking-[0.1em] text-muted-foreground transition-colors hover:text-primary"
+                  className="font-body text-lg tracking-[0.1em] text-muted-foreground hover:text-primary transition"
                 >
                   {link.label}
                 </button>
