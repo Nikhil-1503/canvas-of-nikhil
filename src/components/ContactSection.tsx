@@ -5,11 +5,16 @@ import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 import { SectionTitle, PaintSplatter, BrushStroke } from "./PaintDecorations";
 
+const EMAILJS_PUBLIC_KEY = "glQ6jlbUQTtcPryu9"
+const EMAILJS_SERVICE_ID = "service_cc9kin9"
+const EMAILJS_TEMPLATE_ID = "template_pag41bs"
+
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [form, setForm] = useState({ name: "", email: "", message: "", details: "" });
   const [sending, setSending] = useState(false);
+  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,15 +25,15 @@ const ContactSection = () => {
     setSending(true);
     try {
       await emailjs.send(
-        "service_cc9kin9",
-        "template_pag41bs",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
           details: form.details,
         },
-        "glQ6jlbUQTtcPryu9"
+        EMAILJS_PUBLIC_KEY
       );
       toast.success("Message sent! I'll get back to you soon.");
       setForm({ name: "", email: "", message: "", details: "" });
