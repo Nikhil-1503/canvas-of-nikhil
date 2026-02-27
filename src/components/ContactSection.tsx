@@ -1,22 +1,42 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Instagram, Send } from "lucide-react";
+import { Mail, Instagram, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 import { SectionTitle, PaintSplatter, BrushStroke } from "./PaintDecorations";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [form, setForm] = useState({ name: "", email: "", message: "", details: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Message sent! I'll get back to you soon.");
-    setForm({ name: "", email: "", message: "", details: "" });
+    setSending(true);
+    try {
+      await emailjs.send(
+        "service_cc9kin9",
+        "template_pag41bs",
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          details: form.details,
+        },
+        "glQ6jlbUQTtcPryu9"
+      );
+      toast.success("Message sent! I'll get back to you soon.");
+      setForm({ name: "", email: "", message: "", details: "" });
+    } catch {
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -70,10 +90,11 @@ const ContactSection = () => {
             />
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 font-body text-sm font-medium tracking-[0.1em] text-primary-foreground transition-all hover:shadow-[0_0_25px_hsl(340_82%_58%_/_0.4)]"
+              disabled={sending}
+              className="flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 font-body text-sm font-medium tracking-[0.1em] text-primary-foreground transition-all hover:shadow-[0_0_25px_hsl(340_82%_58%_/_0.4)] disabled:opacity-50"
             >
-              <Send size={16} />
-              SEND MESSAGE
+              {sending ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
+              {sending ? "SENDING..." : "SEND MESSAGE"}
             </button>
           </motion.form>
 
