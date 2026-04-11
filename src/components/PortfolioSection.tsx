@@ -47,6 +47,7 @@ import marker3 from "@/assets-webp/artwork-sharada_devi.webp";
 import marker4 from "@/assets-webp/artwork-lord_ganesha.webp";
 import marker5 from "@/assets-webp/artwork-onepiece.webp";
 import marker6 from "@/assets-webp/artwork-minions.webp";
+import marker7 from "@/assets-webp/artwork-detective_conan.webp";
 
 interface Artwork {
   src: string;
@@ -71,6 +72,7 @@ const artworks: Artwork[] = [
   { src: charcoal11, title: "King Kohli", year: "2023", medium: "Charcoal–Graphite Fusion", category: "Portraits", description: "This portrait isn't just about the cricketer; it's about the grit, passion and many years of hard work." },
   { src: marker1, title: "Lord Venkateswara: The Golden Radiance", year: "2024", medium: "Marker & Colored Pencil Blend", category: "Religious Artworks", description: "Capturing the majestic beauty and divinity of Lord Venkateswara Tirupati Balaji." },
   { src: graphite1, title: "Legend of Chhatrapati Shivaji Maharaj", year: "2022", medium: "Graphite", category: "Portraits", description: "A detailed graphite tribute to the visionary founder of the Maratha Empire." },
+  { src: marker7, title: "Detective Conan : 名探偵コナン", year: "2026", medium: "Marker & Colored Pencil Blend", category: "Animated Souls", description: "Capturing the intense moment from the movie - The Fourteenth Target" },
   { src: colored1, title: "The Prismatic Lion", year: "2024", medium: "Colored Pencil", category: "Others", description: "A vibrant explosion of color capturing the majestic gaze of the beast." },
   { src: colored2, title: "Roronoa Zoro: Spirit of 三刀流", year: "2024", medium: "Colored Pencil", category: "Animated Souls", description: "Exploring the legendary green aura of One Piece's legendary pirate hunter." },
   { src: colored3, title: "Wings of flight", year: "2019", medium: "Colored Pencil", category: "Others", description: "It's amazing how a bit of shading can turn a simple drawing into lifelike. This was my first 3D artwork." },
